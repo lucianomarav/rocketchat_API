@@ -730,6 +730,10 @@ class RocketChat:
     def rooms_admin_rooms(self, **kwargs):
         """ Retrieves all rooms (requires the view-room-administration permission)."""
         return self.__call_api_get('rooms.adminRooms', kwargs=kwargs)
+    
+    def rooms_create_discussion(self, prid, t_name, **kwargs):
+        """Creates a new discussion for room"""
+        return self.__call_api_post('rooms.createDiscussion', prid=prid, t_name=t_name, kwargs=kwargs)
 
     # Subscriptions
 
